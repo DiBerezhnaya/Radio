@@ -7,13 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
 
     @Test
-    public void numberStation() {
-        Radio cond = new Radio();
+    public void numberCurrentRadioStation() {
+        Radio cond = new Radio(10);
 
-        cond.setCurrentRadioStation(8);
-
-        int expected = 8;
-        int actual = cond.getCurrentRadioStation();
+        cond.setAmountRadioStation(1);
+        int expected = 1;
+        int actual = cond.getAmountRadioStation();
 
         assertEquals(expected, actual);
     }
@@ -73,11 +72,11 @@ public class RadioTest {
     @Test
     public void increaseVolumeBorders() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(5);
+        cond.setCurrentVolume(11);
 
         cond.increaseVolume();
 
-        int expected = 6;
+        int expected = 12;
         int actual = cond.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -86,11 +85,11 @@ public class RadioTest {
     @Test
     public void increaseVolume() {
         Radio cond = new Radio();
-        cond.setCurrentVolume(11);
+        cond.setCurrentVolume(101);
 
         cond.increaseVolume();
 
-        int expected = 10;
+        int expected = 100;
         int actual = cond.getCurrentVolume();
 
         assertEquals(expected, actual);
