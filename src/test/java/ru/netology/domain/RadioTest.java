@@ -8,10 +8,21 @@ public class RadioTest {
 
     @Test
     public void numberCurrentRadioStation() {
+        Radio cond = new Radio();
+
+        cond.setAmountRadioStation(15);
+        int expected = 10;
+        int actual = cond.getAmountRadioStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void numberBordersCurrentRadioStation() {
         Radio cond = new Radio(10);
 
-        cond.setAmountRadioStation(1);
-        int expected = 1;
+        cond.setAmountRadioStation(3);
+        int expected = 3;
         int actual = cond.getAmountRadioStation();
 
         assertEquals(expected, actual);
