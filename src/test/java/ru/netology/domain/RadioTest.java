@@ -94,7 +94,7 @@ public class RadioTest {
     }
 
     @Test
-    public void increaseVolume() {
+    public void increaseVolumeMoreThanMax() {
         Radio cond = new Radio();
         cond.setCurrentVolume(101);
 
@@ -121,7 +121,7 @@ public class RadioTest {
     }
 
     @Test
-    public void decreaseVolume() {
+    public void decreaseVolumeLessMin() {
         Radio cond = new Radio();
         cond.setCurrentVolume(0);
 
