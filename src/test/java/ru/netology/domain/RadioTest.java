@@ -101,6 +101,7 @@ public class RadioTest {
         cond.increaseVolume();
 
         int expected = 100;
+
         int actual = cond.getCurrentVolume();
 
         assertEquals(expected, actual);
