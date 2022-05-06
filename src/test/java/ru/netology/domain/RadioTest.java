@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
 
     @Test
-    public void numberNewCurrentRadioStation() {
+    public void numberNewAmountRadioStation() {
         Radio cond = new Radio(20);
 
         cond.setAmountRadioStation(15);
@@ -18,7 +18,7 @@ public class RadioTest {
     }
 
     @Test
-    public void numberBorderCurrentRadioStation() {
+    public void numberBorderAmountRadioStation() {
         Radio cond = new Radio();
 
         cond.setAmountRadioStation(5);
@@ -29,7 +29,7 @@ public class RadioTest {
     }
 
     @Test
-    public void numberMoreMaxCurrentRadioStation() {
+    public void numberMoreMaxAmountRadioStation() {
         Radio cond = new Radio();
 
         cond.setAmountRadioStation(14);
@@ -39,6 +39,16 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void numberLessMinAmountRadioStation() {
+        Radio cond = new Radio();
+
+        cond.setAmountRadioStation(-1);
+        int expected = 0;
+        int actual = cond.getAmountRadioStation();
+
+        assertEquals(expected, actual);
+    }
 
     @Test
     public void next() {
